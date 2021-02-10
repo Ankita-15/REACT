@@ -1,7 +1,7 @@
 import React from 'react';
 import './style/form.css';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Login extends React.Component{
@@ -58,7 +58,9 @@ class Login extends React.Component{
                    {/* <div>
                        <button type='submit'>Forgot Password?</button>
                    </div> */}
-                  
+                  <p>
+                      <Link className='redirect-link' to={'/forgot'}> Forgot Password ?</Link>
+                  </p>
                 </form>
             </div>
         )

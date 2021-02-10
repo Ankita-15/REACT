@@ -2,6 +2,7 @@ import React from 'react';
 import './style/form.css';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 class SignUp extends React.Component{
     
@@ -62,26 +63,26 @@ class SignUp extends React.Component{
         return (
             
             <div className='div-form'> 
-            <h2>Sign Up</h2>
+            <h2>Create Account </h2>
                 <form onSubmit={this.handleSubmit}>
                    <div> 
-                    <input type='text' name='fName' placeholder='Enter First Name' value={fName} required onChange={this.handleChange}/>
+                    <input type='text' name='fName' placeholder='First Name' value={fName} required onChange={this.handleChange}/>
                    </div>
 
                    <div>
-                    <input type='text' name='lName' placeholder='Enter Last Name' value={lName} required onChange={this.handleChange}/>
+                    <input type='text' name='lName' placeholder='Last Name' value={lName} required onChange={this.handleChange}/>
                    </div>
 
                    <div>
-                    <input type='text' name='userName' placeholder='Enter Username' value={userName} required onChange={this.handleChange}/>
+                    <input type='text' name='userName' placeholder='Username' value={userName} required onChange={this.handleChange}/>
                    </div>
 
                    <div>
-                    <input type='email' name='email' placeholder='Enter Email' value={email} required onChange={this.handleChange}/>
+                    <input type='email' name='email' placeholder='Email' value={email} required onChange={this.handleChange}/>
                    </div>
 
                    <div>
-                    <input type='password' name='password' placeholder='Enter Password' value={password} required onChange={this.handleChange}/>
+                    <input type='password' name='password' placeholder='Password' value={password} required onChange={this.handleChange}/>
                    </div>
 
                    <div>
@@ -91,8 +92,12 @@ class SignUp extends React.Component{
                    <div>
                        <button type='submit' >Sign up</button>
                    </div>
+                   
                   
                 </form>
+                <p>
+                      <Link className='redirect-link' to={'/login'}> Already a user? Sign in here  </Link>
+                </p>
             </div>
         )
     }
